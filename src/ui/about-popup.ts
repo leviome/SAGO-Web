@@ -69,12 +69,12 @@ class AboutPopup extends Container {
             id: 'about-app-info'
         });
         appInfo.dom.addEventListener('click', () => {
-            window.open('https://github.com/playcanvas/supersplat', '_blank')?.focus();
+            window.open('https://github.com/leviome/SAGO-Web', '_blank', 'noopener,noreferrer');
         });
 
         const appName = new Label({
             id: 'about-app-name',
-            text: 'SuperSplat'
+            text: 'SAGO Web'
         });
 
         const appVersionLabel = new Label({
@@ -84,6 +84,21 @@ class AboutPopup extends Container {
 
         appInfo.append(appName);
         appInfo.append(appVersionLabel);
+
+        const paper = new Container({ id: 'about-sago-paper' });
+        const paperLink = document.createElement('a');
+        paperLink.href = 'https://arxiv.org/abs/2607.01628';
+        paperLink.target = '_blank';
+        paperLink.rel = 'noopener noreferrer';
+        paperLink.textContent = 'SAGO · ECCV 2026 — Online Segment 3D Gaussians via Launching Virtual Drones';
+        const authors = document.createElement('p');
+        authors.textContent = 'Liwei Liao · Rongjie Wang · Ronggang Wang';
+        const upstream = document.createElement('a');
+        upstream.href = 'https://github.com/playcanvas/supersplat';
+        upstream.target = '_blank';
+        upstream.rel = 'noopener noreferrer';
+        upstream.textContent = 'Web tool based on SuperSplat 3.3.1';
+        paper.dom.append(paperLink, authors, upstream);
 
         // Dependencies
         const depsContainer = new Container({
@@ -147,6 +162,7 @@ class AboutPopup extends Container {
 
         // Assemble content
         content.append(brand);
+        content.append(paper);
         content.append(details);
 
         // Assemble dialog

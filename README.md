@@ -1,6 +1,14 @@
 # SAGO Web v1.0
 
-基于 [SuperSplat](https://github.com/playcanvas/supersplat) 的纯前端 3D Gaussian 分割工具。场景加载、SAM2 Hiera Large FP32 推理、跨视角记忆和 Virtual Drone 均在浏览器本机运行，无需业务服务器或 Python 推理后端。
+**SAGO（Segment Any Gaussians Online，ECCV 2026）的 Web 工具与浏览器移植。** 本工具将 SAGO 的交互式 3D Gaussian 分割、跨视角记忆与 Virtual Drone 空间细化移植到浏览器，以 [SuperSplat](https://github.com/playcanvas/supersplat) 为编辑器和渲染基础。场景加载与 SAM2 Hiera Large FP32 推理均在本机完成，无需业务服务器或 Python 推理后端。
+
+> **Online Segment 3D Gaussians via Launching Virtual Drones**
+>
+> Liwei Liao, Rongjie Wang, Ronggang Wang · **ECCV 2026**
+
+[论文 / arXiv](https://arxiv.org/abs/2607.01628) · [PDF](https://arxiv.org/pdf/2607.01628) · [SAGO 原始代码](https://github.com/leviome/SAGO) · [Web 工具发布版](https://github.com/leviome/SAGO-Web/releases/tag/v1.0) · [引用](#citation)
+
+关于论文方法与本浏览器版本的对应关系，见 [论文与 Web 实现](docs/PAPER.md)。论文中的速度和精度以原始实验设置为准；Web 版本的固定六视角巡航、渲染和运行环境存在差异。
 
 ## 功能
 
@@ -80,3 +88,20 @@ CI 验证源码类型、lint、单元测试和无模型的构建；GPU 推理回
 SAGO Web v1.0 基于 **SuperSplat 3.3.1**，上游 commit：`c9e29913f3c86f2a4ae80f71b331116ac7eb6815`。保留上游 [MIT 许可](LICENSE) 与 [原项目说明](docs/SUPERSPLAT-UPSTREAM.md)。SAGO Web 的版本号独立于 SuperSplat。
 
 SAM2 模型采用 [Apache-2.0](docs/LICENSE-SAM2)；ONNX Runtime 和其他依赖保留各自许可。模型从 SAGO 原始 `sam2_hiera_large.pt` 导出为 FP32，详情见 [SAM2-LARGE.md](docs/SAM2-LARGE.md) 与 [SAM2-MEMORY.md](docs/SAM2-MEMORY.md)。
+
+<a id="citation"></a>
+## 引用 / Citation
+
+如果本工具或 SAGO 方法对你的研究有帮助，请引用 SAGO 论文：
+
+```bibtex
+@inproceedings{liao2026sago,
+  title     = {Online Segment 3D Gaussians via Launching Virtual Drones},
+  author    = {Liao, Liwei and Wang, Rongjie and Wang, Ronggang},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026},
+  url       = {https://arxiv.org/abs/2607.01628}
+}
+```
+
+可下载 [BibTeX](docs/SAGO.bib)。[CITATION.cff](CITATION.cff) 也提供论文引用信息，供 GitHub 的 “Cite this repository” 使用。

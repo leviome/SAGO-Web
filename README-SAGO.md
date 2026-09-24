@@ -1,6 +1,6 @@
 # SAGO Web v1.0 — 纯前端分割工具
 
-基于 SuperSplat 的浏览器分割工具。PLY、图像和推理均留在本机，无需 Python、CUDA 服务或业务后端；网页及模型是普通静态文件。
+本工具是 **SAGO（Segment Any Gaussians Online，ECCV 2026）** 的浏览器移植，关联论文 [Online Segment 3D Gaussians via Launching Virtual Drones](https://arxiv.org/abs/2607.01628)（Liwei Liao、Rongjie Wang、Ronggang Wang）。以 SuperSplat 为编辑器和渲染基础；[原始 SAGO 代码](https://github.com/leviome/SAGO)、[实现范围与引用](docs/PAPER.md)。PLY、图像和推理均留在本机，无需 Python、CUDA 服务或业务后端；网页及模型是普通静态文件。
 
 当前版本使用项目原版 **SAM2 Hiera Large FP32**，支持原生框提示、level 0–3 和跨视角 memory。首次模型下载会弹框询问并显示进度。memory 使用说明见 [SAM2-MEMORY.md](docs/SAM2-MEMORY.md)。迁移说明见 [SAM2-LARGE.md](docs/SAM2-LARGE.md)。旧版 SlimSAM 分割效果差异的实测、原因和复现方法见 [SEGMENTATION-DEBUG.md](docs/SEGMENTATION-DEBUG.md)。现在可对比候选缩略图，并导出原图、提示及全部 mask 作为诊断样本。
 

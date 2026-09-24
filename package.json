@@ -2,14 +2,18 @@
     "name": "sago-web",
     "version": "1.0.0",
     "author": "PlayCanvas<support@playcanvas.com>",
-    "homepage": "https://github.com/leviome/SAGO",
-    "description": "Browser-only 3D Gaussian segmentation with SAM2 Large, WebGPU and cross-view memory",
+    "homepage": "https://github.com/leviome/SAGO-Web",
+    "description": "Web tool for SAGO (ECCV 2026): browser-only 3D Gaussian segmentation with SAM2 Large and Virtual Drone",
     "keywords": [
         "playcanvas",
         "ply",
         "gaussian",
         "splat",
-        "editor"
+        "editor",
+        "sago",
+        "eccv-2026",
+        "webgpu",
+        "segmentation"
     ],
     "license": "MIT",
     "main": "index.js",
@@ -78,5 +82,9 @@
         "version": "3.3.1",
         "repository": "https://github.com/playcanvas/supersplat",
         "commit": "c9e29913f3c86f2a4ae80f71b331116ac7eb6815"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/leviome/SAGO-Web.git"
     }
 }

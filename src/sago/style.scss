@@ -32,6 +32,7 @@
     aside p { margin: 0; color: #a6bac6; }
     aside label { display: flex; flex-direction: column; gap: 5px; color: #b9cbd4; }
     .sago-badge { align-self: flex-start; background: #183a33; color: #89e6bf; border-radius: 20px; padding: 3px 9px; font-size: 11px; }
+    .sago-paper-link { color: #89e6bf; font-size: 12px; text-underline-offset: 3px; }
     .sago-row { display: flex; gap: 8px; > * { flex: 1; } }
     .sago-candidates {
         display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px;

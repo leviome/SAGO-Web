@@ -49,6 +49,7 @@ export const registerSago = (scene: Scene, events: Events) => {
             </div>
             <aside>
                 <div class="sago-badge">场景与推理均在本机</div>
+                <a class="sago-paper-link" href="https://arxiv.org/abs/2607.01628" target="_blank" rel="noopener noreferrer" title="Online Segment 3D Gaussians via Launching Virtual Drones — Liwei Liao, Rongjie Wang, Ronggang Wang">SAGO · ECCV 2026 · 阅读论文 ↗</a>
                 <h2>从画面选中三维对象</h2>
                 <p>使用原版 SAM2 Large（FP32）生成 2D mask，再投影为 Gaussian 选区。可换视角重复分割、取交集细化。</p>
                 <label>模型来源<select id="sago-source"><option value="local">SAM2 Large · 本站下载，在本机运行</option></select></label>

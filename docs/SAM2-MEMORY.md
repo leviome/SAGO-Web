@@ -1,5 +1,7 @@
 # SAM2 Large 跨视角 memory 与下载确认
 
+本文描述 [SAGO（ECCV 2026）](https://arxiv.org/abs/2607.01628) 相关能力在 Web 端的移植；论文与浏览器实现的范围及引用见 [PAPER.md](PAPER.md)。
+
 当前版本在浏览器中运行同一份 SAGO `sam2_hiera_large.pt` 的图像编码、提示解码、memory encoder 和 memory fusion。保留 FP32，使用 ONNX Runtime Web 1.23.2 / WebGPU；不需要 Python 推理服务。
 
 ## 使用流程

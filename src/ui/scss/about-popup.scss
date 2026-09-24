@@ -13,11 +13,12 @@
         top: 50%;
         width: 340px;
         max-width: calc(100vw - 32px);
+        max-height: calc(100vh - 32px);
         transform: translate(-50%, -50%);
 
         display: flex;
         flex-direction: column;
-        overflow: hidden;
+        overflow-y: auto;
 
         border-radius: 8px;
         background-color: $bcg-primary;
@@ -52,6 +53,16 @@
         flex-direction: column;
         align-items: center;
         gap: 14px;
+    }
+
+    #about-sago-paper {
+        text-align: center;
+        line-height: 1.5;
+        font-size: 12px;
+
+        a { color: $text-primary; text-underline-offset: 3px; }
+        p { margin: 8px 0; }
+        a:focus-visible { outline: 2px solid #89e6bf; outline-offset: 3px; }
     }
 
     #about-logo {

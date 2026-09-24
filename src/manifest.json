@@ -1,7 +1,7 @@
 {
     "name": "SAGO Web",
     "short_name": "SAGO",
-    "description": "Local 3D Gaussian segmentation with SAM2 Large and WebGPU, based on SuperSplat.",
+    "description": "Web tool for SAGO (ECCV 2026): local 3D Gaussian segmentation and Virtual Drone, based on SuperSplat.",
     "display": "fullscreen",
     "start_url": "./",
     "scope": "./",
