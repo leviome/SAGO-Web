@@ -1,0 +1,23 @@
+.claude
+.cursor
+.DS_Store
+.idea
+.npmrc
+.vscode
+dist
+node_modules
+static/models/slimsam/
+test-results/
+playwright-report/
+artifacts/
+static/models/sam2-large/
+
+# Local credentials, caches and release output
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
+*.py[cod]
+release/
